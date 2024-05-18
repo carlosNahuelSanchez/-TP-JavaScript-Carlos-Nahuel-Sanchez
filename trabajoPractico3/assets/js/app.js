@@ -11,7 +11,7 @@ do {
             alert("Se añadio " + tareaAgr + " a su lista de tareas con exito")
         break;
         case 2:
-
+            alert("Sus tareas guardadas son: " + listaTareas)
         break;
         case 3:
         
@@ -28,5 +28,5 @@ do {
     }
 } while (accionUsuario !== 5)
 
-    
+
     
