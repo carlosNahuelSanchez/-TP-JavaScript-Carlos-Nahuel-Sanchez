@@ -6,7 +6,9 @@ do {
     
     switch (accionUsuario) {
         case 1:
-            
+            let tareaAgr = prompt("¿Que tarea desea agregar?")
+            listaTareas.push(tareaAgr)
+            alert("Se añadio " + tareaAgr + " a su lista de tareas con exito")
         break;
         case 2:
 
@@ -25,4 +27,6 @@ do {
         break;
     }
 } while (accionUsuario !== 5)
+
+    
     
