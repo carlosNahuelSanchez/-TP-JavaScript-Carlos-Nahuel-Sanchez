@@ -1,6 +1,8 @@
+//Definición de variables principales
 let listaTareas = [];
 let accionUsuario;
 
+// Definición de Funciones
 function tareaAgr(tareaNew) {
     tareaNew = prompt("¿Qué tarea desea agregar?");
     if (tareaNew.trim() !== tareaNew) {
@@ -16,7 +18,7 @@ function tareaAgr(tareaNew) {
 }
 
 function tareaEdit(tareaAModificar, iTareaAModificar, tareaModificada) {
-    tareaAModificar = prompt("¿Qué tarea desea modificar de la lista? " + listaTareas);
+    tareaAModificar = prompt("¿Qué tarea desea modificar de la lista? \n" + listaTareas);
     iTareaAModificar = listaTareas.indexOf(tareaAModificar);
     if (iTareaAModificar === -1) {
         alert("ERROR: La tarea ingresada no existe.");
@@ -37,7 +39,7 @@ function tareaEdit(tareaAModificar, iTareaAModificar, tareaModificada) {
 }
 
 function tareaElim(tareaAEliminar, iTareaAEliminar) {
-    tareaAEliminar = prompt("¿Qué tarea desea eliminar de la lista? " + listaTareas);
+    tareaAEliminar = prompt("¿Qué tarea desea eliminar de la lista? \n" + listaTareas);
     iTareaAEliminar = listaTareas.indexOf(tareaAEliminar);
     if (iTareaAEliminar === -1) {
         alert("ERROR: La tarea ingresada no existe.");
@@ -48,15 +50,16 @@ function tareaElim(tareaAEliminar, iTareaAEliminar) {
     }
 }
 
+//Bucle de interaccion del usuario
 do {
-    accionUsuario = parseInt(prompt("Seleccione qué quiere hacer: 1-Agregar Tarea 2-Listar Tareas 3-Editar Tarea 4-Eliminar Tarea 5-Salir"));
+    accionUsuario = parseFloat(prompt("Seleccione qué quiere hacer: \n1-Agregar Tarea \n2-Listar Tareas \n3-Editar Tarea \n4-Eliminar Tarea \n5-Salir"));
 
     switch (accionUsuario) {
         case 1:
             tareaAgr();
             break;
         case 2:
-            alert("Sus tareas guardadas son: " + listaTareas);
+            alert("Sus tareas guardadas son: \n" + listaTareas);
             break;
         case 3:
             tareaEdit();
